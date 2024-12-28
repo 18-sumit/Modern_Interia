@@ -9,7 +9,7 @@ const Header = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <nav className="bg-white shadow-lg">
+        <nav className="bg-white shadow-lg max-w-screen-xl">
             <div className="container flex justify-between items-center py-4">
                 {/* Logo Section */}
                 <div className="text-xl flex items-center gap-2 font-bold uppercase">
