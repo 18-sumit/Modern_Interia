@@ -13,7 +13,7 @@ const Footer = () => {
                     </p>
                 </div>
 
-                {/* Column 2 */}
+                {/* Column 2  */}
                 <div>
                     <h3 className="font-bold text-lg">Our Services</h3>
                     <ul className="mt-2 space-y-2 text-sm">
