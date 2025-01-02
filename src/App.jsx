@@ -13,8 +13,10 @@ const App = () => {
 
     <div className="px-4 sm:px[5vw] md:px-[7vw] lg:px-[9vw]">
       <Header />
+
       {/* <Hero /> */}
       <Routes>
+
         <Route path="/" element={<Home />} />
         <Route path="/services" element={<Services />} />
         <Route path="/contact" element={<Contact />} />
