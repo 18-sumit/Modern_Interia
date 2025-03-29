@@ -2,6 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Contact = () => {
+<<<<<<< HEAD
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -10,6 +11,13 @@ const Contact = () => {
         service: "residential"
     });
     const [copySuccess, setCopySuccess] = useState(false);
+=======
+    return (
+// contact page
+        <div>Contact</div>
+    )
+}
+>>>>>>> 21ac25adfe2524d4b4697f83863081414e1fc486
 
     const handleSubmit = (e) => {
         e.preventDefault();

@@ -25,4 +25,26 @@ const App = () => {
     );
 };
 
+<<<<<<< HEAD
 export default App; 
+=======
+
+
+    <div className="px-4 sm:px[5vw] md:px-[7vw] lg:px-[9vw]">
+      <Header />
+
+      {/* <Hero /> */}
+      <Routes>
+
+        <Route path="/" element={<Home />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="/art-gallery" element={<ArtGallery />} />
+      </Routes>
+      <Footer />
+    </div>
+  )
+}
+
+export default App 
+>>>>>>> 21ac25adfe2524d4b4697f83863081414e1fc486

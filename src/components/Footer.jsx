@@ -110,9 +110,31 @@ const Footer = () => {
                     </div>
                 </div>
 
+<<<<<<< HEAD
                 {/* Bottom Bar */}
                 <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
                     <p>&copy; {new Date().getFullYear()} Modern Interia. All rights reserved.</p>
+=======
+                {/* Column 2  */}
+                <div>
+                    <h3 className="font-bold text-lg">Our Services</h3>
+                    <ul className="mt-2 space-y-2 text-sm">
+                        <li>Interior Design</li>
+                        <li>Outdoor Design</li>
+                        <li>Office Design</li>
+                        <li>Painting Work</li>
+                    </ul>
+                </div>
+
+                {/* Column 3 */}
+                <div>
+                    <h3 className="font-bold text-lg">Contact</h3>
+                    <ul className="mt-2 space-y-2 text-sm">
+                        <li>Phone: 998770854</li>
+                        <li>Email: moderninteria200@gmail.com</li>
+                        <li>Address: Wagle Estate, Thane</li>
+                    </ul>
+>>>>>>> 21ac25adfe2524d4b4697f83863081414e1fc486
                 </div>
             </div>
         </footer>
