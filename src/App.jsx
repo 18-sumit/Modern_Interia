@@ -1,13 +1,15 @@
 import { Routes, Route } from "react-router-dom";
-import Header from "./components/Header";
-import Footer from "./components/Footer";
-import Home from "./Pages/Home";
-import Services from "./Pages/Services";
-import Contact from "./Pages/Contact";
-import ArtGallery from "./Pages/ArtGallery";
+import Header from "./Components/Header.jsx";
+import Footer from "./Components/Footer.jsx";
+import Home from "./Pages/Home.jsx";
+import About from "./Pages/About.jsx";
+import Services from "./Pages/Services.jsx";
+import Contact from "./Pages/Contact.jsx";
+// import Portfolio from "./Pages/Portfolio.jsx";
+import ArtGallery from "./Pages/ArtGallery.jsx";
 // import Hero from "./components/Hero"
 
-const App = () => {
+function App() {
     return (
         <div className="flex flex-col min-h-screen">
             <Header />
@@ -15,36 +17,16 @@ const App = () => {
             <main className="flex-grow">
                 <Routes>
                     <Route path="/" element={<Home />} />
+                    <Route path="/about" element={<About />} />
                     <Route path="/services" element={<Services />} />
                     <Route path="/contact" element={<Contact />} />
+                    {/* <Route path="/portfolio" element={<Portfolio />} /> */}
                     <Route path="/art-gallery" element={<ArtGallery />} />
                 </Routes>
             </main>
             <Footer />
         </div>
     );
-};
-
-<<<<<<< HEAD
-export default App; 
-=======
-
-
-    <div className="px-4 sm:px[5vw] md:px-[7vw] lg:px-[9vw]">
-      <Header />
-
-      {/* <Hero /> */}
-      <Routes>
-
-        <Route path="/" element={<Home />} />
-        <Route path="/services" element={<Services />} />
-        <Route path="/contact" element={<Contact />} />
-        <Route path="/art-gallery" element={<ArtGallery />} />
-      </Routes>
-      <Footer />
-    </div>
-  )
 }
 
-export default App 
->>>>>>> 21ac25adfe2524d4b4697f83863081414e1fc486
+export default App;
