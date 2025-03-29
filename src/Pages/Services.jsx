@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
 import PropTypes from 'prop-types';
+import { Link } from "react-router-dom";
 
 const services = [
     {
@@ -109,9 +110,14 @@ const Services = () => {
                 <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                     Let&apos;s discuss how we can bring your vision to life with our expert design services.
                 </p>
-                <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                {/* <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
                     Schedule a Consultation
-                </button>
+                </button> */}
+                <Link to = "/contact">
+                    <button className="bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                        Schedule a Consultation
+                    </button>
+                </Link>
             </motion.div>
         </div>
     );
