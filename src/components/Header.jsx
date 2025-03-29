@@ -83,6 +83,16 @@ const Header = () => {
                         >
                             Contact
                         </NavLink>
+                        <NavLink
+                            to="/about"
+                            className={({ isActive }) =>
+                                `text-gray-700 hover:text-secondary px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary border-b-2 border-secondary" : ""
+                                }`
+                            }
+                        >
+                            About Us
+                        </NavLink>
                         <button className="bg-secondary text-white px-6 py-2 rounded-full font-medium hover:bg-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg">
                             Book a call
                         </button>
