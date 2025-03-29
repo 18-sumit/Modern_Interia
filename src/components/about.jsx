@@ -1,6 +1,6 @@
 // AboutSection.jsx
 import { motion } from "framer-motion";
-
+import { Link } from "react-router-dom";
 const AboutSection = () => {
     return (
         <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
@@ -60,9 +60,11 @@ const AboutSection = () => {
                                 </p>
                             </div>
                         </div>
-                        <button className="mt-8 bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
-                            Learn More About Us
-                        </button>
+                        <Link to="/about">
+                            <button className="mt-8 bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                                Learn More About Us
+                            </button>
+                        </Link>
                     </motion.div>
                 </div>
             </div>
