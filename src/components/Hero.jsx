@@ -19,13 +19,13 @@ const Hero = () => {
 
             {/* Hero Content */}
             <div className="relative min-h-screen flex items-center">
-                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-32">
+                <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 sm:py-24 lg:py-32">
                     <div className="max-w-3xl">
                         <motion.h1
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8 }}
-                            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6 leading-tight"
+                            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold text-white mb-4 sm:mb-6 leading-tight"
                         >
                             Transform Your Space into a Masterpiece
                         </motion.h1>
@@ -33,7 +33,7 @@ const Hero = () => {
                             initial={{ opacity: 0, y: 20 }}
                             animate={{ opacity: 1, y: 0 }}
                             transition={{ duration: 0.8, delay: 0.2 }}
-                            className="text-xl text-gray-200 mb-8 max-w-2xl"
+                            className="text-base sm:text-lg md:text-xl text-gray-200 mb-6 sm:mb-8 max-w-2xl"
                         >
                             Discover the perfect blend of style and functionality with our expert interior design services. We create spaces that inspire and delight.
                         </motion.p>

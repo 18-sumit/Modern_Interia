@@ -1,47 +1,33 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
-import { assets } from "../assets/assests";
 
 const Header = () => {
     // State to toggle mobile menu visibility
-    const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-    // Function to toggle the mobile menu
-    const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+    const [isOpen, setIsOpen] = useState(false);
 
     return (
-        <nav className="bg-white shadow-md sticky top-0 z-50">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="flex justify-between items-center h-20">
-                    {/* Logo Section */}
+        <header className="bg-white shadow-md fixed w-full top-0 z-50">
+            <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-16">
+                    {/* Logo */}
                     <div className="flex-shrink-0">
-                        <Link to="/" className="flex items-center space-x-2">
-                            <img 
-                                src={assets.Logo} 
-                                alt="Modern Interia Logo" 
-                                className="h-12 w-auto"
-                            />
-                            <div className="text-2xl font-bold">
-                                <span className="text-gray-900">Modern</span>
-                                <span className="text-secondary block">Interia</span>
-                            </div>
+                        <Link to="/" className="text-2xl font-bold">
+                            <span>Modern</span>
+                            <span className="text-secondary">Interia</span>
                         </Link>
                     </div>
 
-                    {/* Mobile Hamburger Menu Button */}
+                    {/* Mobile Menu Button */}
                     <div className="md:hidden">
                         <button
-                            onClick={toggleMenu}
-                            aria-label="Toggle Navigation"
-                            className="text-gray-700 hover:text-gray-900 focus:outline-none"
+                            onClick={() => setIsOpen(!isOpen)}
+                            className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
                         >
-                            <span className="block w-6 h-0.5 bg-gray-700 mb-1"></span>
-                            <span className="block w-6 h-0.5 bg-gray-700 mb-1"></span>
-                            <span className="block w-6 h-0.5 bg-gray-700"></span>
+                            <span className="text-2xl">{isOpen ? '✕' : '☰'}</span>
                         </button>
                     </div>
 
-                    {/* Menu Section (Desktop) */}
+                    {/* Desktop Navigation */}
                     <div className="hidden md:flex md:items-center md:space-x-8">
                         <NavLink
                             to="/"
@@ -98,36 +84,10 @@ const Header = () => {
                         </button>
                     </div>
                 </div>
-            </div>
 
-            {/* Mobile Menu Section */}
-            <div
-                className={`md:hidden ${
-                    isMenuOpen ? "block" : "hidden"
-                } absolute top-0 left-0 w-full bg-white shadow-lg`}
-            >
-                <div className="px-4 py-4">
-                    <div className="flex justify-between items-center">
-                        <div className="flex items-center space-x-2">
-                            <img 
-                                src={assets.Logo} 
-                                alt="Modern Interia Logo" 
-                                className="h-10 w-auto"
-                            />
-                            <div className="text-xl font-bold text-gray-900">
-                                <span className="text-secondary">Menu</span>
-                            </div>
-                        </div>
-                        <button
-                            onClick={toggleMenu}
-                            aria-label="Close Menu"
-                            className="text-gray-700 hover:text-gray-900 focus:outline-none"
-                        >
-                            <span className="text-3xl">&times;</span>
-                        </button>
-                    </div>
-
-                    <div className="mt-6 space-y-4">
+                {/* Mobile Navigation */}
+                {isOpen && (
+                    <div className="md:hidden py-4 space-y-2">
                         <NavLink
                             to="/"
                             className={({ isActive }) =>
@@ -135,7 +95,7 @@ const Header = () => {
                                     isActive ? "text-secondary" : ""
                                 }`
                             }
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={() => setIsOpen(false)}
                         >
                             Home
                         </NavLink>
@@ -146,7 +106,7 @@ const Header = () => {
                                     isActive ? "text-secondary" : ""
                                 }`
                             }
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={() => setIsOpen(false)}
                         >
                             Services
                         </NavLink>
@@ -157,7 +117,7 @@ const Header = () => {
                                     isActive ? "text-secondary" : ""
                                 }`
                             }
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={() => setIsOpen(false)}
                         >
                             Art Gallery
                         </NavLink>
@@ -168,7 +128,7 @@ const Header = () => {
                                     isActive ? "text-secondary" : ""
                                 }`
                             }
-                            onClick={() => setIsMenuOpen(false)}
+                            onClick={() => setIsOpen(false)}
                         >
                             Contact
                         </NavLink>
@@ -176,9 +136,9 @@ const Header = () => {
                             Book a call
                         </button>
                     </div>
-                </div>
-            </div>
-        </nav>
+                )}
+            </nav>
+        </header>
     );
 };
 

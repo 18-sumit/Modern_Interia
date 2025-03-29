@@ -77,16 +77,11 @@ const Contact = () => {
             </div>
 
             {/* Contact Section */}
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 sm:py-16 lg:py-20">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 sm:gap-12">
                     {/* Contact Information */}
-                    <motion.div
-                        initial={{ opacity: 0, x: -50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="space-y-8"
-                    >
-                        <div className="bg-white p-8 rounded-2xl shadow-lg">
+                    <motion.div className="space-y-6 sm:space-y-8">
+                        <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg">
                             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Contact Information</h3>
                             <div className="space-y-6">
                                 <div className="flex items-start space-x-4">
@@ -142,7 +137,7 @@ const Contact = () => {
                             </div>
                         </div>
 
-                        <div className="bg-white p-8 rounded-2xl shadow-lg">
+                        <div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg">
                             <h3 className="text-2xl font-semibold text-gray-900 mb-6">Follow Us</h3>
                             <div className="flex space-x-6">
                                 <a href="#" className="w-12 h-12 bg-secondary/10 rounded-full flex items-center justify-center text-gray-700 hover:text-secondary hover:bg-secondary/20 transition-colors duration-200">
@@ -159,12 +154,7 @@ const Contact = () => {
                     </motion.div>
 
                     {/* Contact Form */}
-                    <motion.div
-                        initial={{ opacity: 0, x: 50 }}
-                        animate={{ opacity: 1, x: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="bg-white p-8 rounded-2xl shadow-lg border border-gray-100"
-                    >
+                    <motion.div className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg">
                         <h3 className="text-2xl font-semibold text-gray-900 mb-6">Send us a Message</h3>
                         <form onSubmit={handleSubmit} className="space-y-6">
                             <div>

@@ -83,15 +83,19 @@ const Services = () => {
 
             {/* Services Grid */}
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 lg:gap-10">
                     {services.map((service, index) => (
-                        <ServiceCard
+                        <motion.div
                             key={service.title}
-                            title={service.title}
-                            description={service.description}
-                            icon={service.icon}
-                            index={index}
-                        />
+                            className="bg-white p-4 sm:p-6 lg:p-8 rounded-2xl shadow-lg"
+                        >
+                            <ServiceCard
+                                title={service.title}
+                                description={service.description}
+                                icon={service.icon}
+                                index={index}
+                            />
+                        </motion.div>
                     ))}
                 </div>
             </div>

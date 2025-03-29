@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 import PropTypes from 'prop-types';
 import { assets } from "../assets/assests";
-
+import { Link } from "react-router-dom";
 const projects = [
     {
         id: 1,
@@ -158,9 +158,14 @@ const ArtGallery = () => {
                     <p className="text-xl text-gray-600 mb-8 max-w-2xl mx-auto">
                         Let&apos;s create something extraordinary together
                     </p>
+                    {/* <button className="bg-secondary text-white px-8 py-3 rounded-full font-medium hover:bg-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg">
+                        Schedule a Consultation
+                    </button> */}
+                    <Link to = "/contact">
                     <button className="bg-secondary text-white px-8 py-3 rounded-full font-medium hover:bg-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg">
                         Schedule a Consultation
                     </button>
+                    </Link>
                 </motion.div>
             </div>
         </div>
