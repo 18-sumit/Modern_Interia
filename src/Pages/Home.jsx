@@ -5,7 +5,6 @@ import Stats from "../components/stats";
 const Home = () => {
     return (
         <div>
-// component of hero 
             <Hero />
             <AboutSection />
             <Stats />

@@ -2,7 +2,6 @@ import { motion } from "framer-motion";
 import { useState } from "react";
 
 const Contact = () => {
-<<<<<<< HEAD
     const [formData, setFormData] = useState({
         name: "",
         email: "",
@@ -11,13 +10,6 @@ const Contact = () => {
         service: "residential"
     });
     const [copySuccess, setCopySuccess] = useState(false);
-=======
-    return (
-// contact page
-        <div>Contact</div>
-    )
-}
->>>>>>> 21ac25adfe2524d4b4697f83863081414e1fc486
 
     const handleSubmit = (e) => {
         e.preventDefault();
@@ -51,28 +43,41 @@ const Contact = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-50 py-20">
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-                {/* Hero Section */}
-                <div className="text-center mb-16">
-                    <motion.h1
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8 }}
-                        className="text-4xl sm:text-5xl font-bold text-gray-900 mb-4"
-                    >
-                        Get in Touch
-                    </motion.h1>
-                    <motion.p
-                        initial={{ opacity: 0, y: 20 }}
-                        animate={{ opacity: 1, y: 0 }}
-                        transition={{ duration: 0.8, delay: 0.2 }}
-                        className="text-xl text-gray-600 max-w-2xl mx-auto"
-                    >
-                        Let&apos;s discuss how we can transform your space into something extraordinary
-                    </motion.p>
+        <div className="min-h-screen bg-gray-50">
+            {/* Hero Section */}
+            <div className="relative h-[50vh] min-h-[400px] w-full">
+                <div 
+                    className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+                    style={{
+                        backgroundImage: "url('https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80')",
+                    }}
+                >
+                    <div className="absolute inset-0 bg-black/50" />
                 </div>
+                <div className="relative h-full flex items-center justify-center text-center px-4">
+                    <div className="max-w-3xl">
+                        <motion.h1
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8 }}
+                            className="text-4xl sm:text-5xl md:text-6xl font-bold text-white mb-6"
+                        >
+                            Get in Touch
+                        </motion.h1>
+                        <motion.p
+                            initial={{ opacity: 0, y: 20 }}
+                            animate={{ opacity: 1, y: 0 }}
+                            transition={{ duration: 0.8, delay: 0.2 }}
+                            className="text-xl text-gray-200 max-w-2xl mx-auto"
+                        >
+                            Let&apos;s discuss how we can transform your space into something extraordinary
+                        </motion.p>
+                    </div>
+                </div>
+            </div>
 
+            {/* Contact Section */}
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
                 <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
                     {/* Contact Information */}
                     <motion.div
@@ -101,7 +106,7 @@ const Contact = () => {
                                     <div>
                                         <h4 className="text-lg font-medium text-gray-900 mb-1">Phone Number</h4>
                                         <div className="flex items-center space-x-2">
-                                            <p className="text-gray-600">+1 (555) 123-4567</p>
+                                            <p className="text-gray-600">+91 76176 32569</p>
                                             <button
                                                 onClick={openWhatsApp}
                                                 className="text-secondary hover:text-secondary/80 transition-colors"

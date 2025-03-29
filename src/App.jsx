@@ -7,13 +7,11 @@ import Services from "./Pages/Services.jsx";
 import Contact from "./Pages/Contact.jsx";
 // import Portfolio from "./Pages/Portfolio.jsx";
 import ArtGallery from "./Pages/ArtGallery.jsx";
-// import Hero from "./components/Hero"
 
 function App() {
     return (
         <div className="flex flex-col min-h-screen">
             <Header />
-            {/* <Hero /> */}
             <main className="flex-grow">
                 <Routes>
                     <Route path="/" element={<Home />} />
