@@ -7,13 +7,10 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
                     {/* Company Info */}
-                    <div className="space-y-4">
-                        <div className="text-2xl font-bold">
-                            <p>Modern</p>
-                            <p className="text-secondary">Interia</p>
-                        </div>
-                        <p className="text-gray-400">
-                            Creating timeless interiors that reflect your unique style and enhance your living spaces.
+                    <div>
+                        <h3 className="text-xl font-bold mb-4">Modern Interia</h3>
+                        <p className="text-gray-400 mb-4">
+                            Transforming spaces into extraordinary experiences with innovative design solutions.
                         </p>
                         <div className="flex space-x-4">
                             <a href="#" className="text-gray-400 hover:text-white transition-colors">
@@ -30,11 +27,16 @@ const Footer = () => {
 
                     {/* Quick Links */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                        <h3 className="text-xl font-bold mb-4">Quick Links</h3>
                         <ul className="space-y-2">
                             <li>
                                 <Link to="/" className="text-gray-400 hover:text-white transition-colors">
                                     Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/about" className="text-gray-400 hover:text-white transition-colors">
+                                    About Us
                                 </Link>
                             </li>
                             <li>
@@ -43,13 +45,8 @@ const Footer = () => {
                                 </Link>
                             </li>
                             <li>
-                                <Link to="/art-gallery" className="text-gray-400 hover:text-white transition-colors">
+                                <Link to="/portfolio" className="text-gray-400 hover:text-white transition-colors">
                                     Portfolio
-                                </Link>
-                            </li>
-                            <li>
-                                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
-                                    Contact
                                 </Link>
                             </li>
                         </ul>
@@ -57,84 +54,58 @@ const Footer = () => {
 
                     {/* Services */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+                        <h3 className="text-xl font-bold mb-4">Our Services</h3>
                         <ul className="space-y-2">
                             <li>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
                                     Residential Design
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
                                     Commercial Design
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
                                     Renovation
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
-                                    Space Planning
-                                </a>
+                                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
+                                    Consultation
+                                </Link>
                             </li>
                         </ul>
                     </div>
 
                     {/* Contact Info */}
                     <div>
-                        <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+                        <h3 className="text-xl font-bold mb-4">Contact Us</h3>
                         <ul className="space-y-2">
-                            <li className="flex items-start">
-                                <span className="text-2xl mr-2">📍</span>
-                                <span className="text-gray-400">
-                                    123 Design Street<br />
-                                    New York, NY 10001
-                                </span>
+                            <li className="text-gray-400">
+                                <span className="text-xl mr-2">📍</span>
+                                123 Design Street
                             </li>
-                            <li className="flex items-start">
-                                <span className="text-2xl mr-2">📞</span>
-                                <span className="text-gray-400">
-                                    +1 (555) 123-4567<br />
-                                    Mon-Fri: 9:00 AM - 6:00 PM
-                                </span>
+                            <li className="text-gray-400">
+                                <span className="text-xl mr-2">📞</span>
+                                +91 76176 32569
                             </li>
-                            <li className="flex items-start">
-                                <span className="text-2xl mr-2">✉️</span>
-                                <span className="text-gray-400">
-                                    info@moderninteria.com
-                                </span>
+                            <li className="text-gray-400">
+                                <span className="text-xl mr-2">✉️</span>
+                                info@moderninteria.com
+                            </li>
+                            <li className="text-gray-400">
+                                <span className="text-xl mr-2">⏰</span>
+                                Mon-Fri: 9:00 AM - 6:00 PM
                             </li>
                         </ul>
                     </div>
                 </div>
 
-<<<<<<< HEAD
                 {/* Bottom Bar */}
                 <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
                     <p>&copy; {new Date().getFullYear()} Modern Interia. All rights reserved.</p>
-=======
-                {/* Column 2  */}
-                <div>
-                    <h3 className="font-bold text-lg">Our Services</h3>
-                    <ul className="mt-2 space-y-2 text-sm">
-                        <li>Interior Design</li>
-                        <li>Outdoor Design</li>
-                        <li>Office Design</li>
-                        <li>Painting Work</li>
-                    </ul>
-                </div>
-
-                {/* Column 3 */}
-                <div>
-                    <h3 className="font-bold text-lg">Contact</h3>
-                    <ul className="mt-2 space-y-2 text-sm">
-                        <li>Phone: 998770854</li>
-                        <li>Email: moderninteria200@gmail.com</li>
-                        <li>Address: Wagle Estate, Thane</li>
-                    </ul>
->>>>>>> 21ac25adfe2524d4b4697f83863081414e1fc486
                 </div>
             </div>
         </footer>
