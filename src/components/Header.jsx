@@ -22,6 +22,7 @@ const Header = () => {
                         <button
                             onClick={() => setIsOpen(!isOpen)}
                             className="p-2 rounded-md text-gray-600 hover:text-gray-900 hover:bg-gray-100 focus:outline-none"
+                            aria-label="Toggle menu"
                         >
                             <span className="text-2xl">{isOpen ? '✕' : '☰'}</span>
                         </button>
@@ -87,54 +88,67 @@ const Header = () => {
 
                 {/* Mobile Navigation */}
                 {isOpen && (
-                    <div className="md:hidden py-4 space-y-2">
-                        <NavLink
-                            to="/"
-                            className={({ isActive }) =>
-                                `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
-                                    isActive ? "text-secondary" : ""
-                                }`
-                            }
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Home
-                        </NavLink>
-                        <NavLink
-                            to="/services"
-                            className={({ isActive }) =>
-                                `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
-                                    isActive ? "text-secondary" : ""
-                                }`
-                            }
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Services
-                        </NavLink>
-                        <NavLink
-                            to="/art-gallery"
-                            className={({ isActive }) =>
-                                `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
-                                    isActive ? "text-secondary" : ""
-                                }`
-                            }
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Art Gallery
-                        </NavLink>
-                        <NavLink
-                            to="/contact"
-                            className={({ isActive }) =>
-                                `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
-                                    isActive ? "text-secondary" : ""
-                                }`
-                            }
-                            onClick={() => setIsOpen(false)}
-                        >
-                            Contact
-                        </NavLink>
-                        <button className="w-full bg-secondary text-white px-6 py-3 rounded-full font-medium hover:bg-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg">
-                            Book a call
-                        </button>
+                    <div className="md:hidden absolute left-0 right-0 top-16 bg-white border-t border-gray-200 shadow-lg">
+                        <div className="px-4 py-4 space-y-2">
+                            <NavLink
+                                to="/"
+                                className={({ isActive }) =>
+                                    `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                        isActive ? "text-secondary" : ""
+                                    }`
+                                }
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Home
+                            </NavLink>
+                            <NavLink
+                                to="/services"
+                                className={({ isActive }) =>
+                                    `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                        isActive ? "text-secondary" : ""
+                                    }`
+                                }
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Services
+                            </NavLink>
+                            <NavLink
+                                to="/art-gallery"
+                                className={({ isActive }) =>
+                                    `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                        isActive ? "text-secondary" : ""
+                                    }`
+                                }
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Art Gallery
+                            </NavLink>
+                            <NavLink
+                                to="/contact"
+                                className={({ isActive }) =>
+                                    `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                        isActive ? "text-secondary" : ""
+                                    }`
+                                }
+                                onClick={() => setIsOpen(false)}
+                            >
+                                Contact
+                            </NavLink>
+                            <NavLink
+                                to="/about"
+                                className={({ isActive }) =>
+                                    `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                        isActive ? "text-secondary" : ""
+                                    }`
+                                }
+                                onClick={() => setIsOpen(false)}
+                            >
+                                About Us
+                            </NavLink>
+                            <button className="w-full bg-secondary text-white px-6 py-3 rounded-full font-medium hover:bg-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg">
+                                Book a call
+                            </button>
+                        </div>
                     </div>
                 )}
             </nav>

@@ -14,17 +14,17 @@ const StatItem = ({ number, label, delay }) => {
             initial={{ opacity: 0, y: 20 }}
             animate={isInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
             transition={{ duration: 0.8, delay }}
-            className="text-center"
+            className="text-center px-2"
         >
             <motion.div
                 initial={{ number: 0 }}
                 animate={isInView ? { number } : { number: 0 }}
                 transition={{ duration: 2, delay }}
-                className="text-4xl sm:text-5xl font-bold text-gray-900 mb-2"
+                className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-2"
             >
                 {Math.round(isInView ? number : 0)}+
             </motion.div>
-            <p className="text-gray-600 text-lg">{label}</p>
+            <p className="text-gray-600 text-sm sm:text-base md:text-lg break-words">{label}</p>
         </motion.div>
     );
 };

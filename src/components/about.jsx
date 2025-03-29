@@ -12,18 +12,18 @@ const AboutSection = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         transition={{ duration: 0.8 }}
                         viewport={{ once: true }}
-                        className="relative"
+                        className="relative w-full"
                     >
-                        <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                        <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden w-full">
                             <img
-                                src="/about-image.jpg"
+                                src="https://images.unsplash.com/photo-1618221195710-dd6b41faaea6?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2000&q=80"
                                 alt="Interior Design"
                                 className="w-full h-full object-cover"
                             />
                         </div>
                         {/* Experience Badge */}
-                        <div className="absolute -bottom-6 -right-6 bg-black text-white p-6 rounded-lg">
-                            <p className="text-4xl font-bold">15+</p>
+                        <div className="absolute -bottom-6 -right-6 bg-black text-white p-4 sm:p-6 rounded-lg">
+                            <p className="text-3xl sm:text-4xl font-bold">15+</p>
                             <p className="text-sm">Years of Experience</p>
                         </div>
                     </motion.div>
