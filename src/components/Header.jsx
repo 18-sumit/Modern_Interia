@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, NavLink } from "react-router-dom";
+import { assets } from "../assets/assests";
 
 const Header = () => {
     // State to toggle mobile menu visibility
@@ -9,131 +10,163 @@ const Header = () => {
     const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
     return (
-        <nav className="bg-white shadow-lg max-w-screen-xl">
-            <div className="container flex justify-between items-center py-4">
-                {/* Logo Section */}
-                <div className="text-xl flex items-center gap-2 font-bold uppercase">
-                    <Link to="/">
-                        <p>Modern</p>
-                        <p className="text-secondary">Interia</p>
-                    </Link>
-                </div>
+        <nav className="bg-white shadow-md sticky top-0 z-50">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="flex justify-between items-center h-20">
+                    {/* Logo Section */}
+                    <div className="flex-shrink-0">
+                        <Link to="/" className="flex items-center space-x-2">
+                            <img 
+                                src={assets.Logo} 
+                                alt="Modern Interia Logo" 
+                                className="h-12 w-auto"
+                            />
+                            <div className="text-2xl font-bold">
+                                <span className="text-gray-900">Modern</span>
+                                <span className="text-secondary block">Interia</span>
+                            </div>
+                        </Link>
+                    </div>
 
-                {/* Mobile Hamburger Menu Button */}
-                <div className="md:hidden">
-                    <button
-                        onClick={toggleMenu}
-                        aria-label="Toggle Navigation"
-                        className="text-gray-700 focus:outline-none"
-                    >
-                        <span className="block w-6 h-0.5 bg-gray-700 mb-1"></span>
-                        <span className="block w-6 h-0.5 bg-gray-700 mb-1"></span>
-                        <span className="block w-6 h-0.5 bg-gray-700"></span>
-                    </button>
-                </div>
+                    {/* Mobile Hamburger Menu Button */}
+                    <div className="md:hidden">
+                        <button
+                            onClick={toggleMenu}
+                            aria-label="Toggle Navigation"
+                            className="text-gray-700 hover:text-gray-900 focus:outline-none"
+                        >
+                            <span className="block w-6 h-0.5 bg-gray-700 mb-1"></span>
+                            <span className="block w-6 h-0.5 bg-gray-700 mb-1"></span>
+                            <span className="block w-6 h-0.5 bg-gray-700"></span>
+                        </button>
+                    </div>
 
-                {/* Menu Section (Desktop) */}
-                <div className="hidden md:block">
-                    <ul className="flex items-center gap-6 text-gray-700">
+                    {/* Menu Section (Desktop) */}
+                    <div className="hidden md:flex md:items-center md:space-x-8">
                         <NavLink
                             to="/"
-                            className="py-1 px-3 hover:text-secondary font-semibold hover:underline active:underline"
+                            className={({ isActive }) =>
+                                `text-gray-700 hover:text-secondary px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary border-b-2 border-secondary" : ""
+                                }`
+                            }
                         >
                             Home
                         </NavLink>
                         <NavLink
                             to="/services"
-                            className="py-1 px-3 hover:text-secondary font-semibold hover:underline active:underline"
+                            className={({ isActive }) =>
+                                `text-gray-700 hover:text-secondary px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary border-b-2 border-secondary" : ""
+                                }`
+                            }
                         >
                             Services
                         </NavLink>
                         <NavLink
                             to="/art-gallery"
-                            className="py-1 px-3 hover:text-secondary font-semibold hover:underline active:underline"
+                            className={({ isActive }) =>
+                                `text-gray-700 hover:text-secondary px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary border-b-2 border-secondary" : ""
+                                }`
+                            }
                         >
                             Art Gallery
                         </NavLink>
                         <NavLink
                             to="/contact"
-                            className="py-1 px-3 hover:text-secondary font-semibold hover:underline active:underline"
+                            className={({ isActive }) =>
+                                `text-gray-700 hover:text-secondary px-3 py-2 text-sm font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary border-b-2 border-secondary" : ""
+                                }`
+                            }
                         >
                             Contact
                         </NavLink>
-                        <NavLink
-                            to="/portfolio"
-                            className="py-1 px-3 hover:text-secondary font-semibold hover:underline active:underline"
-                        >
-                            Portfolio
-                        </NavLink>
-                    </ul>
-                </div>
-
-                {/* Button Section (Desktop) */}
-                <div className="hidden md:block">
-                    <button className="bg-black text-gray-100 px-4 py-2 rounded-xl border-2 hover:bg-secondary font-semibold">
-                        Book a call
-                    </button>
+                        <button className="bg-secondary text-white px-6 py-2 rounded-full font-medium hover:bg-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg">
+                            Book a call
+                        </button>
+                    </div>
                 </div>
             </div>
 
             {/* Mobile Menu Section */}
             <div
-                className={`md:hidden ${isMenuOpen ? "block" : "hidden"} absolute top-0 left-0 w-full bg-white shadow-md py-6 px-6`}
+                className={`md:hidden ${
+                    isMenuOpen ? "block" : "hidden"
+                } absolute top-0 left-0 w-full bg-white shadow-lg`}
             >
-                <div className="flex justify-between items-center">
-                    <h2 className="text-xl font-bold text-gray-700">Menu</h2>
-                    {/* Close Button (X) */}
-                    <button
-                        onClick={toggleMenu}
-                        aria-label="Close Menu"
-                        className="text-gray-700 text-3xl"
-                    >
-                        &times; {/* The close 'X' character */}
-                    </button>
-                </div>
+                <div className="px-4 py-4">
+                    <div className="flex justify-between items-center">
+                        <div className="flex items-center space-x-2">
+                            <img 
+                                src={assets.Logo} 
+                                alt="Modern Interia Logo" 
+                                className="h-10 w-auto"
+                            />
+                            <div className="text-xl font-bold text-gray-900">
+                                <span className="text-secondary">Menu</span>
+                            </div>
+                        </div>
+                        <button
+                            onClick={toggleMenu}
+                            aria-label="Close Menu"
+                            className="text-gray-700 hover:text-gray-900 focus:outline-none"
+                        >
+                            <span className="text-3xl">&times;</span>
+                        </button>
+                    </div>
 
-                <ul className="flex flex-col items-center gap-4 text-gray-700 mt-4">
-                    <NavLink
-                        to="/"
-                        className="block py-1 text-center text-lg font-semibold hover:text-secondary hover:underline active:underline"
-                        onClick={() => setIsMenuOpen(false)} // Close menu on click
-                    >
-                        Home
-                    </NavLink>
-                    <NavLink
-                        to="/services"
-                        className="block py-1 text-center text-lg font-semibold hover:text-secondary hover:underline active:underline"
-                        onClick={() => setIsMenuOpen(false)} // Close menu on click
-                    >
-                        Services
-                    </NavLink>
-                    <NavLink
-                        to="/art-gallery"
-                        className="block py-1 text-center text-lg font-semibold hover:text-secondary hover:underline active:underline"
-                        onClick={() => setIsMenuOpen(false)} // Close menu on click
-                    >
-                        Art Gallery
-                    </NavLink>
-                    <NavLink
-                        to="/contact"
-                        className="block py-1 text-center text-lg font-semibold hover:text-secondary hover:underline active:underline"
-                        onClick={() => setIsMenuOpen(false)} // Close menu on click
-                    >
-                        Contact
-                    </NavLink>
-                    <NavLink
-                        to="/portfolio"
-                        className="block py-1 text-center text-lg font-semibold hover:text-secondary hover:underline active:underline"
-                        onClick={() => setIsMenuOpen(false)} // Close menu on click
-                    >
-                        Portfolio
-                    </NavLink>
-                    <div className="pt-4">
-                        <button className="bg-black text-gray-100 px-4 py-2 rounded-xl border-2 hover:bg-secondary font-semibold">
+                    <div className="mt-6 space-y-4">
+                        <NavLink
+                            to="/"
+                            className={({ isActive }) =>
+                                `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary" : ""
+                                }`
+                            }
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Home
+                        </NavLink>
+                        <NavLink
+                            to="/services"
+                            className={({ isActive }) =>
+                                `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary" : ""
+                                }`
+                            }
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Services
+                        </NavLink>
+                        <NavLink
+                            to="/art-gallery"
+                            className={({ isActive }) =>
+                                `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary" : ""
+                                }`
+                            }
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Art Gallery
+                        </NavLink>
+                        <NavLink
+                            to="/contact"
+                            className={({ isActive }) =>
+                                `block text-gray-700 hover:text-secondary py-2 text-base font-medium transition-colors duration-200 ${
+                                    isActive ? "text-secondary" : ""
+                                }`
+                            }
+                            onClick={() => setIsMenuOpen(false)}
+                        >
+                            Contact
+                        </NavLink>
+                        <button className="w-full bg-secondary text-white px-6 py-3 rounded-full font-medium hover:bg-secondary/90 transition-colors duration-200 shadow-md hover:shadow-lg">
                             Book a call
                         </button>
                     </div>
-                </ul>
+                </div>
             </div>
         </nav>
     );

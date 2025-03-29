@@ -1,17 +1,70 @@
 // AboutSection.jsx
+import { motion } from "framer-motion";
+
 const AboutSection = () => {
     return (
-        <section className="relative px-6 py-16 bg-gray-50">
-            <div className="max-w-4xl mx-auto">
-                <h2 className="text-4xl font-bold text-brown-800 mb-6">Modern Interia</h2>
-                <p className="text-gray-700 leading-relaxed">
-                    Modern Interia combines luxury, functionality, and creativity to deliver
-                    bespoke interior solutions. With over 20 years of experience, we specialize
-                    in creating inspiring workplaces, inviting spaces, stunning homes, and
-                    commercial designs. Our turnkey services cover every detail, crafted
-                    with quality and innovation, transforming your vision into inspiring,
-                    lasting spaces.
-                </p>
+        <section className="py-20 px-4 sm:px-6 lg:px-8 bg-white">
+            <div className="max-w-7xl mx-auto">
+                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                    {/* Image Section */}
+                    <motion.div
+                        initial={{ opacity: 0, x: -50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="relative"
+                    >
+                        <div className="aspect-w-4 aspect-h-3 rounded-lg overflow-hidden">
+                            <img
+                                src="/about-image.jpg"
+                                alt="Interior Design"
+                                className="w-full h-full object-cover"
+                            />
+                        </div>
+                        {/* Experience Badge */}
+                        <div className="absolute -bottom-6 -right-6 bg-black text-white p-6 rounded-lg">
+                            <p className="text-4xl font-bold">15+</p>
+                            <p className="text-sm">Years of Experience</p>
+                        </div>
+                    </motion.div>
+
+                    {/* Content Section */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 50 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        transition={{ duration: 0.8 }}
+                        viewport={{ once: true }}
+                        className="space-y-6"
+                    >
+                        <h2 className="text-3xl sm:text-4xl font-bold text-gray-900">
+                            Crafting Timeless Interiors
+                        </h2>
+                        <p className="text-lg text-gray-600 leading-relaxed">
+                            We believe that great design has the power to transform spaces and enhance lives. 
+                            Our team of experienced designers combines creativity with technical expertise to 
+                            create interiors that are both beautiful and functional.
+                        </p>
+                        <div className="grid grid-cols-2 gap-6">
+                            <div className="space-y-2">
+                                <h3 className="text-xl font-semibold text-gray-900">Our Approach</h3>
+                                <p className="text-gray-600">
+                                    We take a collaborative approach, working closely with our clients to 
+                                    understand their vision and bring it to life.
+                                </p>
+                            </div>
+                            <div className="space-y-2">
+                                <h3 className="text-xl font-semibold text-gray-900">Our Promise</h3>
+                                <p className="text-gray-600">
+                                    We promise to deliver exceptional quality and attention to detail in 
+                                    every project we undertake.
+                                </p>
+                            </div>
+                        </div>
+                        <button className="mt-8 bg-black text-white px-8 py-3 rounded-lg font-semibold hover:bg-gray-800 transition-colors">
+                            Learn More About Us
+                        </button>
+                    </motion.div>
+                </div>
             </div>
         </section>
     );

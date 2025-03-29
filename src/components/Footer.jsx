@@ -1,43 +1,122 @@
+// Footer.jsx
+import { Link } from "react-router-dom";
+
 const Footer = () => {
     return (
-        // <footer className="w-full bg-gray-800 text-white">
-        <div className="justify-between">
-            {/* Constrain the content to a max width */}
-            <div className="max-w-screen-xl mx-auto px-6 py-8 grid grid-cols-1 md:grid-cols-3 gap-8">
-                {/* Column 1 */}
-                <div>
-                    <h3 className=" text-xl font-bold ">Modern</h3>
-                    <h3 className="text-secondary text-xl font-bold">Interia</h3>
-                    <p className="mt-2 text-sm">
-                        Creating Inspiring Spaces for Modern Living
-                    </p>
+        <footer className="bg-gray-900 text-white">
+            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                    {/* Company Info */}
+                    <div className="space-y-4">
+                        <div className="text-2xl font-bold">
+                            <p>Modern</p>
+                            <p className="text-secondary">Interia</p>
+                        </div>
+                        <p className="text-gray-400">
+                            Creating timeless interiors that reflect your unique style and enhance your living spaces.
+                        </p>
+                        <div className="flex space-x-4">
+                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                <span className="text-2xl">📱</span>
+                            </a>
+                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                <span className="text-2xl">📸</span>
+                            </a>
+                            <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                <span className="text-2xl">💼</span>
+                            </a>
+                        </div>
+                    </div>
+
+                    {/* Quick Links */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Quick Links</h3>
+                        <ul className="space-y-2">
+                            <li>
+                                <Link to="/" className="text-gray-400 hover:text-white transition-colors">
+                                    Home
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/services" className="text-gray-400 hover:text-white transition-colors">
+                                    Services
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/art-gallery" className="text-gray-400 hover:text-white transition-colors">
+                                    Portfolio
+                                </Link>
+                            </li>
+                            <li>
+                                <Link to="/contact" className="text-gray-400 hover:text-white transition-colors">
+                                    Contact
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Services */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Our Services</h3>
+                        <ul className="space-y-2">
+                            <li>
+                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    Residential Design
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    Commercial Design
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    Renovation
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#" className="text-gray-400 hover:text-white transition-colors">
+                                    Space Planning
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    {/* Contact Info */}
+                    <div>
+                        <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
+                        <ul className="space-y-2">
+                            <li className="flex items-start">
+                                <span className="text-2xl mr-2">📍</span>
+                                <span className="text-gray-400">
+                                    123 Design Street<br />
+                                    New York, NY 10001
+                                </span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-2xl mr-2">📞</span>
+                                <span className="text-gray-400">
+                                    +1 (555) 123-4567<br />
+                                    Mon-Fri: 9:00 AM - 6:00 PM
+                                </span>
+                            </li>
+                            <li className="flex items-start">
+                                <span className="text-2xl mr-2">✉️</span>
+                                <span className="text-gray-400">
+                                    info@moderninteria.com
+                                </span>
+                            </li>
+                        </ul>
+                    </div>
                 </div>
 
-                {/* Column 2 */}
-                <div>
-                    <h3 className="font-bold text-lg">Our Services</h3>
-                    <ul className="mt-2 space-y-2 text-sm">
-                        <li>Interior Design</li>
-                        <li>Outdoor Design</li>
-                        <li>Office Design</li>
-                        <li>Painting Work</li>
-                    </ul>
-                </div>
-
-                {/* Column 3 */}
-                <div>
-                    <h3 className="font-bold text-lg">Contact</h3>
-                    <ul className="mt-2 space-y-2 text-sm">
-                        <li>Phone: 998770854</li>
-                        <li>Email: moderninteria200@gmail.com</li>
-                        <li>Address: Wagle Estate, Thane</li>
-                    </ul>
+                {/* Bottom Bar */}
+                <div className="border-t border-gray-800 mt-12 pt-8 text-center text-gray-400">
+                    <p>&copy; {new Date().getFullYear()} Modern Interia. All rights reserved.</p>
                 </div>
             </div>
-        </div>
-        // </footer>
-
-    )
+        </footer>
+    );
 };
 
-export default Footer
+export default Footer;
