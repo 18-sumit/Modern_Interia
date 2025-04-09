@@ -90,8 +90,8 @@ const Contact = () => {
                                     </div>
                                     <div>
                                         <h4 className="text-lg font-medium text-gray-900 mb-1">Our Location</h4>
-                                        <p className="text-gray-600">123 Design Street</p>
-                                        <p className="text-gray-600">New York, NY 10001</p>
+                                        <p className="text-gray-600">Wagle Estate</p>
+                                        <p className="text-gray-600">Thane (West) 400604</p>
                                     </div>
                                 </div>
                                 <div className="flex items-start space-x-4">
@@ -120,7 +120,7 @@ const Contact = () => {
                                     <div>
                                         <h4 className="text-lg font-medium text-gray-900 mb-1">Email Address</h4>
                                         <div className="flex items-center space-x-2">
-                                            <p className="text-gray-600">info@moderninteria.com</p>
+                                            <p className="text-gray-600">moderninteria2004@gmail.com</p>
                                             <button
                                                 onClick={() => copyToClipboard("info@moderninteria.com")}
                                                 className="text-secondary hover:text-secondary/80 transition-colors"

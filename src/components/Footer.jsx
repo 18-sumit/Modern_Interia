@@ -85,7 +85,7 @@ const Footer = () => {
                         <ul className="space-y-2">
                             <li className="text-gray-400">
                                 <span className="text-xl mr-2">📍</span>
-                                123 Design Street
+                                Wagle Estate Thane (West)
                             </li>
                             <li className="text-gray-400">
                                 <span className="text-xl mr-2">📞</span>
@@ -93,11 +93,11 @@ const Footer = () => {
                             </li>
                             <li className="text-gray-400">
                                 <span className="text-xl mr-2">✉️</span>
-                                info@moderninteria.com
+                                moderninteria2004@gmail.com
                             </li>
                             <li className="text-gray-400">
-                                <span className="text-xl mr-2">⏰</span>
-                                Mon-Fri: 9:00 AM - 6:00 PM
+                                {/* <span className="text-xl mr-2">⏰</span> */}
+                                {/* Mon-Fri: 9:00 AM - 6:00 PM */}
                             </li>
                         </ul>
                     </div>
